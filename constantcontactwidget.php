@@ -96,7 +96,7 @@ function sf_constantcontact_form($id,$p) {
 		.(empty($p['txt'])?'':('<p>'.$p['txt'].'</p>'))
 		.'<input type="hidden" name="grp" value="'.esc_attr($p['grp']).'" />'
 		.(empty($p['nam'])
-			?('<label for="eml" class="text-hide">'.__('Email').'</label> <input type="text" class="form-control" name="eml" class="input" placeholder="'.__('Email').'"/>')
+			?('<label for="eml" class="text-hide">'.__('Email').'</label> <input type="text" class="form-control" name="eml" id="eml" class="input" placeholder="'.__('Email').'"/>')
 			:('<p><label for="fnm" class="text-hide">'.__('First Name').'</label> <input type="text" name="fnm" class="input"/></p>'
 			.'<p><label for="lnm" class="text-hide">'.__('Last Name').'</label> <input type="text" name="lnm" class="input"/></p>'
 			.'<p><label for="eml" class="text-hide">'.__('Email').'</label> <input type="text" name="eml" class="input"/></p>'))
