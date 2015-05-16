@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Constant Contact Widget (Bootstrapped & Accessible)
+Plugin Name: Accessible WP Constant Contact Widget
 Plugin URI: http://synbydesign.com
-Description: Constant Contant widget for submitting email address. Modified from original (sourcefound.com) version to support accessibility needs and Boostrap hooks
-Version: 1.0
+Description: Constant Contant widget for submitting email address. Modified from original (sourcefound.com) version to support accessibility needs and contains Boostrap CSS hooks
+Version: 0.1
 Author: Eric Masiello
 Author URI: http://synbydesign.com
 License: GPL2
@@ -96,10 +96,10 @@ function sf_constantcontact_form($id,$p) {
 		.(empty($p['txt'])?'':('<p>'.$p['txt'].'</p>'))
 		.'<input type="hidden" name="grp" value="'.esc_attr($p['grp']).'" />'
 		.(empty($p['nam'])
-			?('<label for="eml" class="text-hide">'.__('Email').'</label> <input type="text" class="form-control" name="eml" id="eml" class="input" placeholder="'.__('Email').'"/>')
-			:('<p><label for="fnm" class="text-hide">'.__('First Name').'</label> <input type="text" name="fnm" class="input"/></p>'
-			.'<p><label for="lnm" class="text-hide">'.__('Last Name').'</label> <input type="text" name="lnm" class="input"/></p>'
-			.'<p><label for="eml" class="text-hide">'.__('Email').'</label> <input type="text" name="eml" class="input"/></p>'))
+			?('<label for="eml" class="a11y-text-hide">'.__('Email').'</label> <input type="text" class="form-control" name="eml" id="eml" class="input" placeholder="'.__('Email').'"/>')
+			:('<p><label for="fnm" class="a11y-text-hide">'.__('First Name').'</label> <input type="text" name="fnm" class="input"/></p>'
+			.'<p><label for="lnm" class="a11y-text-hide">'.__('Last Name').'</label> <input type="text" name="lnm" class="input"/></p>'
+			.'<p><label for="eml" class="a11y-text-hide">'.__('Email').'</label> <input type="text" name="eml" class="input"/></p>'))
 		.(empty($p['req'])?'':('<p><input type="checkbox" name="req" class="input" checked="checked"> '.$p['req'].'</p>'))
 		.'<span class="input-group-btn"><input type="submit" value="'.esc_attr($p['btn']).'" class="btn  btn-default" /></span>'
 		.'</form>'
